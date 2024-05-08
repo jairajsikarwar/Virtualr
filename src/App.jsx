@@ -17,6 +17,7 @@ const App = () => {
       <Pricing/>
       <Testimonials/>
       <Footer/>
+      <Main/>
     </div>
   );
 };
