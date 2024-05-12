@@ -1,22 +1,21 @@
 import React from "react";
-import Navbar  from "./components/navbar";
-import HeroSection from "./components/HeroSection";
-import FeatureSection from "./components/FeatureSection";
-import WorkFlow from "./components/WorkFlow";
-import Pricing from "./components/Pricing";
-import Testimonials from "./components/Testimonials";
-import Footer from "./components/Footer";
+
+import { BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Signin from "./pages/Signin";
+import Home from "./pages/Home";
+import Create from "./pages/Create";
 
 const App = () => {
   return (
     <div>
-      <Navbar/>
-      <HeroSection/>
-      <FeatureSection/>
-      <WorkFlow/>
-      <Pricing/>
-      <Testimonials/>
-      <Footer/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Signin" element={<Signin />} />
+          <Route path="/Create" element={<Create />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
